@@ -449,76 +449,79 @@
       }
 
       /* Style for the project section */
-#projectsSection {
-  text-align: left;
-}
+      #projectsSection {
+        text-align: left;
+      }
 
-#projectsTitle {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
+      #projectsTitle {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
 
-/* Container for the project items */
-#projectsContainer {
-  display: flex;
-  flex-wrap: wrap; /* Wrap to the next line if needed */
-  gap: 10px; /* Gap between each project box */
-  margin-top: 20px;
-}
+      /* Container for the project items */
+      #projectsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        /* Wrap to the next line if needed */
+        gap: 10px;
+        /* Gap between each project box */
+        margin-top: 20px;
+      }
 
-/* Individual project box */
-.project-item {
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  overflow: hidden;
-  width: calc(20% - 10px); /* Adjust width to ensure 5 boxes fit in a row, accounting for gaps */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
+      /* Individual project box */
+      .project-item {
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+        width: calc(20% - 10px);
+        /* Adjust width to ensure 5 boxes fit in a row, accounting for gaps */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: left;
+        transition: transform 0.3s ease;
+      }
 
-/* Hover effect for project items */
-.project-item:hover {
-  transform: translateY(-5px); /* Slight hover effect */
-}
+      /* Hover effect for project items */
+      .project-item:hover {
+        transform: translateY(-5px);
+        /* Slight hover effect */
+      }
 
-.project-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+      .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
 
-.project-title {
-  font-size: 1.5em;
-  margin-top: 10px;
-}
+      .project-title {
+        font-size: 1.5em;
+        margin-top: 10px;
+      }
 
-.project-description {
-  color: #666;
-  margin-top: 10px;
-}
+      .project-description {
+        color: #666;
+        margin-top: 10px;
+      }
 
-#moreButton {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  /* Adds a margin from the bottom and right */
-  padding: 5px 10px;
-  font-size: 1rem;
-  background-color: #343a40;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+      #moreButton {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        /* Adds a margin from the bottom and right */
+        padding: 5px 10px;
+        font-size: 1rem;
+        background-color: #343a40;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
 
-#moreButton:hover {
-  background-color: #0056b3;
-  /* Darker shade on hover */
-}
-
+      #moreButton:hover {
+        background-color: #0056b3;
+        /* Darker shade on hover */
+      }
     </style>
   </head>
   <body>
@@ -594,14 +597,11 @@
           </div>
         </div>
       </div>
-
       <div class="section" id="projectsSection">
-        <button class="btn" id="moreButton" data-bs-toggle="modal" data-bs-target="#projectsModal">
-            more...
-          </button>
+        <button class="btn" id="moreButton" data-bs-toggle="modal" data-bs-target="#projectsModal"> more... </button>
         <h2 id="projectsTitle">Projects</h2>
-      <!-- The "More" button at the bottom-right -->
-      
+        <p>Below are some of the key projects I have contributed to. For a comprehensive list of all projects, please refer to the "More" section on the right.</p>
+        <!-- The "More" button at the bottom-right -->
         <!-- Container for the projects (this will hold project items) -->
         <div class="projects-container" id="projectsContainer">
           <div class="project-item" id="project1">
@@ -610,35 +610,31 @@
               <h5 class="project-title" id="project1Title">Municipiul Alba</h5>
             </div>
           </div>
-      
           <div class="project-item" id="project2">
             <img src="projects/abrud logo.jpg" alt="Project 2 Image" class="project-image" id="project2Image">
             <div>
               <h5 class="project-title" id="project2Title">Primăria Abrud</h5>
             </div>
           </div>
-      
           <div class="project-item" id="project3">
             <img src="projects/adps1 logo.jpg" alt="Project 3 Image" class="project-image" id="project3Image">
             <div>
               <h5 class="project-title" id="project3Title">Municipiul Sector I București</h5>
             </div>
           </div>
-      
           <div class="project-item" id="project4">
             <img src="projects/aiud logo.jpg" alt="Project 4 Image" class="project-image" id="project4Image">
             <div>
               <h5 class="project-title" id="project4Title">Municipiul Aiud</h5>
             </div>
           </div>
-      
           <div class="project-item" id="project5">
             <img src="projects/floresti logo.jpg" alt="Project 5 Image" class="project-image" id="project5Image">
             <div>
               <h5 class="project-title" id="project5Title">Primăria Florești</h5>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
       <div class="section" id="educationSection">
         <h2 id="educationTitle">Education</h2>
@@ -675,15 +671,15 @@
       </div>
     </div>
     <!-- Modals for each job -->
-     <!-- Modal for displaying more project details -->
-<div class="modal fade" id="projectsModal" tabindex="-1" aria-labelledby="projectsModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="projectsModalLabel">All Projects</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+    <!-- Modal for displaying more project details -->
+    <div class="modal fade" id="projectsModal" tabindex="-1" aria-labelledby="projectsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectsModalLabel">All Projects</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
             <ul>
               <li>Deva SE</li>
               <li>Apahida SE</li>
@@ -735,10 +731,10 @@
               <li>Slobozia</li>
               <li>Arieseni</li>
             </ul>
-          </div>          
+          </div>
+        </div>
       </div>
     </div>
-  </div>
     <!-- Modal for Job 1 -->
     <div class="modal fade" id="jobModal1" tabindex="-1" aria-labelledby="jobModalLabel1" aria-hidden="true">
       <div class="modal-dialog modal-lg">
