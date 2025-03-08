@@ -3,534 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
-    <!-- Bootstrap CSS -->
+    <title>CV Ardelean Andrei Ioan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-      /* Basic styling for body */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-      }
-
-      .header {
-        background-color: #343a40;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .header img {
-        border-radius: 30%;
-        width: 120px;
-        height: 150px;
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 15px;
-        /* Space below the image */
-        margin-left: auto;
-        /* Ensure left margin is auto for centering */
-        margin-right: auto;
-        /* Ensure right margin is auto for centering */
-        transition: all 0.3s ease;
-        /* Smooth transition for responsiveness */
-      }
-
-      /* Name and title styling */
-      .header h1 {
-        margin: 0;
-        font-size: 2rem;
-      }
-
-      .header h5 {
-        margin: 5px 0;
-        font-size: 1.2rem;
-      }
-
-      /* Contact info section styling */
-      .contact-info {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 15px;
-        flex-wrap: wrap;
-      }
-
-      .contact-info div {
-        display: flex;
-        align-items: center;
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-
-      .contact-info div i {
-        font-size: 18px;
-        margin-right: 10px;
-      }
-
-      .contact-info p {
-        margin: 0;
-        font-size: 16px;
-      }
-
-      .contact-info .phone {
-        display: flex;
-        align-items: center;
-      }
-
-      .contact-info .phone img {
-        width: 16px;
-        height: 16px;
-        margin-left: 5px;
-      }
-
-      /* Styling for the section */
-      .section {
-        margin-bottom: 20px;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: relative;
-        padding-left: 30px;
-      }
-
-      /* Default blue line for all sections */
-      .section::before {
-        content: '';
-        position: absolute;
-        left: -10px;
-        width: 2px;
-        background-color: #343a40;
-        bottom: 0;
-        height: 100%;
-      }
-
-      /* Styling for job items */
-      .job-item {
-        display: flex;
-        align-items: center;
-        background: #f1f1f1;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.2s;
-        text-decoration: none;
-        color: inherit;
-        width: 100%;
-        max-width: 45%;
-        box-sizing: border-box;
-      }
-
-      .job-item:hover {
-        transform: scale(1.02);
-      }
-
-      .job-item img {
-        width: 80px;
-        height: 50px;
-        margin-right: 15px;
-        border-radius: 50%;
-      }
-
-      .job-item h5 {
-        margin: 0;
-        font-size: 1rem;
-      }
-
-      /* Adding space between header and the first section */
-      .container {
-        margin-top: 40px;
-      }
-
-      /* Added styles for the Professional Experience section */
-      .job-section-carousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin: 20px 0;
-      }
-
-      .job-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      .job-item {
-        display: flex;
-        align-items: center;
-        background: #f1f1f1;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.2s;
-        text-decoration: none;
-        color: inherit;
-        width: 100%;
-        max-width: 40%;
-        /* Increase max-width to make them wider */
-        box-sizing: border-box;
-      }
-
-      .job-item:hover {
-        transform: scale(1.02);
-      }
-
-      .job-item img {
-        width: 80px;
-        height: 50px;
-        margin-right: 15px;
-        border-radius: 50%;
-      }
-
-      /* Make the h5 elements bold */
-      .job-item h5 {
-        margin: 0;
-        font-size: 1rem;
-        font-weight: bold;
-        /* Make the text bold */
-      }
-
-      /* Make the job section responsive */
-      @media (max-width: 768px) {
-        .job-section-carousel {
-          flex-direction: column;
-          /* Stack items vertically */
-          align-items: center;
-        }
-
-        .job-section {
-          display: block;
-          /* Stack the job items vertically */
-          width: 100%;
-          /* Make the job section take the full width */
-        }
-
-        .job-item {
-          max-width: 100%;
-          /* Allow job items to take full width */
-          margin-bottom: 20px;
-          /* Space between stacked job items */
-        }
-      }
-
-      /* For extra small screens */
-      @media (max-width: 480px) {
-        .job-item {
-          max-width: 100%;
-          /* Make job items take full width */
-          padding: 10px;
-          /* Reduce padding for smaller screens */
-        }
-
-        .job-item img {
-          width: 60px;
-          /* Make the images smaller */
-          height: 40px;
-        }
-
-        .job-item h5 {
-          font-size: 1rem;
-          /* Adjust font size for smaller screens */
-        }
-
-        .job-item p {
-          font-size: 0.8rem;
-          /* Adjust font size for smaller screens */
-        }
-      }
-
-      @media (max-width: 576px) {
-        .header {
-          padding-top: 50px;
-          /* Add padding on top for smaller screens */
-          flex-direction: column;
-          /* Stack items vertically */
-          text-align: center;
-          /* Ensure header text is centered */
-        }
-
-        .header img {
-          width: 100px;
-          height: 120px;
-          margin-bottom: 10px;
-          /* Space between image and name */
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        .header h1 {
-          font-size: 1.5rem;
-          /* Smaller text on smaller screens */
-        }
-
-        .header h5 {
-          font-size: 1rem;
-        }
-
-        .contact-info {
-          gap: 20px;
-          flex-direction: column;
-          /* Stack contact info vertically on mobile */
-        }
-
-        .contact-info div {
-          font-size: 14px;
-          justify-content: center;
-          /* Center the contact info items */
-        }
-      }
-
-      #educationContent {
-        display: flex;
-        align-items: center;
-        /* Aligns content vertically in the center */
-        gap: 20px;
-        /* Adds space between image and text */
-      }
-
-      #feaaPicture {
-        width: 120px;
-        /* Adjust the width as needed */
-        height: auto;
-        /* Adjust the height as needed */
-        object-fit: cover;
-        /* Ensures the image maintains its aspect ratio and fills the area */
-        margin-left: 50px;
-      }
-
-      #educationContent h2,
-      #educationContent p {
-        margin: 0;
-        /* Removes any extra space/margin around the text elements */
-      }
-
-      /* Responsiveness for smaller screens */
-      @media (max-width: 768px) {
-        #educationContent {
-          flex-direction: column;
-          /* Stack items vertically */
-          align-items: center;
-          /* Center the content */
-          text-align: center;
-          /* Center the text */
-        }
-
-        #feaaPicture {
-          width: 100px;
-          /* Adjust the image size on smaller screens */
-          margin-left: 0;
-          margin-bottom: 20px;
-          /* Add some space below the image */
-        }
-
-        #educationContent h2 {
-          font-size: 1.2rem;
-          /* Adjust heading size on smaller screens */
-        }
-
-        #educationContent p {
-          font-size: 0.9rem;
-          /* Adjust paragraph size */
-        }
-      }
-
-      /* For extra small screens (mobile devices) */
-      @media (max-width: 480px) {
-        #educationContent {
-          gap: 15px;
-          /* Reduce the gap between image and text */
-        }
-
-        #feaaPicture {
-          width: 90px;
-          /* Smaller image size on very small screens */
-        }
-
-        #educationContent h2 {
-          font-size: 1rem;
-          /* Smaller font size */
-        }
-
-        #educationContent p {
-          font-size: 0.8rem;
-          /* Adjust font size for mobile devices */
-        }
-      }
-
-      #certificationsContent {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        /* Space between certification items */
-      }
-
-      .certification-item {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        /* Space between image and text */
-      }
-
-      .certification-item img {
-        width: 100px;
-        /* Adjust width as needed */
-        height: auto;
-        object-fit: cover;
-      }
-
-      .certification-item h5 {
-        margin: 0;
-        font-size: 1.2rem;
-        /* Adjust font size as needed */
-      }
-
-      .certification-item p {
-        margin: 5px 0;
-      }
-
-      #transilvaniaPicture {
-        width: 130px;
-        /* Adjust the width as needed */
-        height: auto;
-        /* Keep the aspect ratio */
-        object-fit: cover;
-        /* Ensures the image maintains its aspect ratio and fills the area */
-        margin-left: 40px;
-      }
-
-      #udemyPicture {
-        width: 130px;
-        /* Adjust the width as needed */
-        height: auto;
-        /* Keep the aspect ratio */
-        object-fit: cover;
-        /* Ensures the image maintains its aspect ratio and fills the area */
-        margin-left: 40px;
-      }
-
-      #certificationsContent h5,
-      #certificationsContent p {
-        margin: 0;
-        /* Removes any extra space/margin around the text elements */
-      }
-
-      @media (max-width: 768px) {
-        #certificationsContent {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-
-        #transilvaniaPicture {
-          width: 80px;
-          margin-bottom: 15px;
-        }
-
-        #certificationsContent h5 {
-          font-size: 1rem;
-        }
-
-        #certificationsContent p {
-          font-size: 0.9rem;
-        }
-      }
-
-      /* Style for the project section */
-      #projectsSection {
-        text-align: left;
-      }
-
-      #projectsTitle {
-        font-size: 2em;
-        margin-bottom: 20px;
-      }
-
-      /* Container for the project items */
-      #projectsContainer {
-        display: flex;
-        flex-wrap: wrap;
-        /* Wrap to the next line if needed */
-        gap: 10px;
-        /* Gap between each project box */
-        margin-top: 20px;
-      }
-
-      /* Individual project box */
-      .project-item {
-        background-color: #f0f0f0;
-        border-radius: 8px;
-        overflow: hidden;
-        width: calc(20% - 10px);
-        /* Adjust width to ensure 5 boxes fit in a row, accounting for gaps */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: left;
-        transition: transform 0.3s ease;
-      }
-
-      /* Hover effect for project items */
-      .project-item:hover {
-        transform: translateY(-5px);
-        /* Slight hover effect */
-      }
-
-      .project-image {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-
-      .project-title {
-        font-size: 1.5em;
-        margin-top: 10px;
-      }
-
-      .project-description {
-        color: #666;
-        margin-top: 10px;
-      }
-
-      #moreButton {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        /* Adds a margin from the bottom and right */
-        padding: 5px 10px;
-        font-size: 1rem;
-        background-color: #343a40;
-        color: rgb(255, 255, 255);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      #moreButton:hover {
-        background-color: #0056b3;
-        /* Darker shade on hover */
-      }
-    </style>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
-    <!-- Header -->
     <div class="header" id="headerSection">
       <img src="me2.jpg" alt="Profile Picture" id="profilePicture">
       <h1 id="fullName">Ardelean Andrei Ioan</h1>
       <h5 id="jobTitle">Quality Assurance Tester</h5>
-      <!-- Contact Information Section -->
       <div class="contact-info" id="contactInfo">
         <div class="phone" data-role="phone-info">
           <i class="fas fa-phone-alt" aria-hidden="true"></i>
@@ -551,14 +34,12 @@
       </div>
     </div>
     <div class="container" id="profileContainer">
-      <!-- Profile Section -->
       <div class="section" id="aboutMeSection">
         <h2 id="aboutMeTitle">About me</h2>
         <div class="content" id="aboutMeContent">
           <p>I began my software testing journey at RoSite in February 2020, where I discovered a passion for ensuring software reliability. I find fulfillment in actively working on various tasks, valuing continuous learning and collaborative teamwork. My goal is to expand my expertise in both manual and automated testing, contributing significantly to the creation of robust software solutions, while growing professionally in a dynamic work environment. I am eager to embrace new challenges and learning opportunities.</p>
         </div>
       </div>
-      <!-- Job Roles Section -->
       <div class="section" id="professionalExperienceSection">
         <h2 id="professionalExperienceTitle">Professional experience</h2>
         <div class="job-section-carousel" id="jobSectionCarousel">
@@ -601,8 +82,6 @@
         <button class="btn" id="moreButton" data-bs-toggle="modal" data-bs-target="#projectsModal"> more... </button>
         <h2 id="projectsTitle">Projects</h2>
         <p>Below are some of the key projects I have contributed to. For a comprehensive list of all projects, please refer to the "More" section on the right.</p>
-        <!-- The "More" button at the bottom-right -->
-        <!-- Container for the projects (this will hold project items) -->
         <div class="projects-container" id="projectsContainer">
           <div class="project-item" id="project1">
             <img src="projects/alba logo.jpg" alt="Project 1 Image" class="project-image" id="project1Image">
@@ -647,11 +126,9 @@
           </div>
         </div>
       </div>
-      <!-- Certifications Section -->
       <div class="section" id="certificationsSection">
         <h2 id="certificationsTitle">Courses & Certifications</h2>
         <div class="content" id="certificationsContent">
-          <!-- Transilvania Certification -->
           <div class="certification-item">
             <img src="transilvania.jpg" alt="Transilvania Picture" id="transilvaniaPicture">
             <div>
@@ -660,7 +137,6 @@
               <p>Certification in Software Testing from Transilvania Digital Innovation 4.0, focusing on advanced manual and automated testing techniques using Java and Selenium WebDriver.</p>
             </div>
           </div>
-          <!-- Udemy Certification -->
           <div class="certification-item">
             <img src="udemy.png" alt="Udemy Picture" id="udemyPicture">
             <div>
@@ -669,9 +145,25 @@
           </div>
         </div>
       </div>
+      <div id="recommendationsSection">
+        <h2 id="recommendationsTitle">Recommendations</h2>
+        <div id="recommendationsContainer">
+          <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-Bosch-Service-Solutions.pdf')">
+            <h3 class="recommendation-title">Bosch Service Solutions</h3>
+          </div>
+          <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-Datagroup.pdf')">
+            <h3 class="recommendation-title">Editura Datagroup</h3>
+          </div>
+          <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-Raul-Tat-PM-Datagroup.pdf')">
+            <h3 class="recommendation-title">Raul Tat Project Manager Datagroup</h3>
+          </div>
+          <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-RoSite.pdf')">
+            <h3 class="recommendation-title"> RoSite</h3>
+          </div>
+        </div>
+      </div>
+      <button id="downloadBtn">Download CV as PDF</button>
     </div>
-    <!-- Modals for each job -->
-    <!-- Modal for displaying more project details -->
     <div class="modal fade" id="projectsModal" tabindex="-1" aria-labelledby="projectsModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -735,7 +227,6 @@
         </div>
       </div>
     </div>
-    <!-- Modal for Job 1 -->
     <div class="modal fade" id="jobModal1" tabindex="-1" aria-labelledby="jobModalLabel1" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -760,7 +251,6 @@
         </div>
       </div>
     </div>
-    <!-- Modal for Job 2 -->
     <div class="modal fade" id="jobModal2" tabindex="-1" aria-labelledby="jobModalLabel2" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -785,7 +275,6 @@
         </div>
       </div>
     </div>
-    <!-- Modal for Job 3 -->
     <div class="modal fade" id="jobModal3" tabindex="-1" aria-labelledby="jobModalLabel3" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -806,7 +295,6 @@
         </div>
       </div>
     </div>
-    <!-- Modal for Job 4 -->
     <div class="modal fade" id="jobModal4" tabindex="-1" aria-labelledby="jobModalLabel4" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -824,6 +312,13 @@
         </div>
       </div>
     </div>
+    <div id="pdfModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closePDF()">&times;</span>
+        <iframe id="pdfViewer" src="" width="100%" height="500px"></iframe>
+      </div>
+    </div>
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
