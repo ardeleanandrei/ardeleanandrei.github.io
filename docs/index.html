@@ -10,10 +10,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
-    <div class="header" id="headerSection">
+    <div id="language-switcher">
+      <img src="projects/englishflag.png" alt="English" id="btn-en" />
+      <img src="projects/romaniaflag.png" alt="Romanian" id="btn-ro" />
+    </div>
+    <div class="header" id="headerSection">     
       <img src="me2.jpg" alt="Profile Picture" id="profilePicture">
       <h1 id="fullName">Ardelean Andrei Ioan</h1>
-      <h5 id="jobTitle">Quality Assurance Tester</h5>
+      <h5 id="jobTitle">
+        <span class="lang lang-en">Quality Assurance Tester</span>
+        <span class="lang lang-ro" style="display:none;">Tester Asigurarea Calității</span>
+      </h5>
       <div class="contact-info" id="contactInfo">
         <div class="phone" data-role="phone-info">
           <i class="fas fa-phone-alt" aria-hidden="true"></i>
@@ -35,43 +42,76 @@
     </div>
     <div class="container" id="profileContainer">
       <div class="section" id="aboutMeSection">
-        <h2 id="aboutMeTitle">About me</h2>
+        <h2 id="aboutMeTitle">
+          <span class="lang lang-en">About me</span>
+          <span class="lang lang-ro" style="display:none;">Despre mine</span>
+        </h2>
         <div class="content" id="aboutMeContent">
-          <p>Quality Assurance Analyst passionate about software testing with experience since 2020, skilled in both manual and automated testing. Committed to ensuring software reliability through meticulous attention to detail and continuous learning. Adept at collaborating within teams to deliver robust software solutions that meet business goals. Seeking to contribute expertise and grow professionally in a dynamic environment, driving quality improvements and innovation.</p>
+          <p>
+            <span class="lang lang-en"> Quality Assurance Analyst passionate about software testing with experience since 2020, skilled in both manual and automated testing. Committed to ensuring software reliability through meticulous attention to detail and continuous learning. Adept at collaborating within teams to deliver robust software solutions that meet business goals. Seeking to contribute expertise and grow professionally in a dynamic environment, driving quality improvements and innovation. </span>
+            <span class="lang lang-ro" style="display:none;"> Analist Asigurarea Calității pasionat de testarea software-ului, cu experiență din 2020, calificat atât în testarea manuală, cât și în cea automată. Devotat asigurării fiabilității software-ului printr-o atenție riguroasă la detalii și învățare continuă. Abil în colaborarea în echipe pentru a livra soluții software robuste care îndeplinesc obiectivele de business. Caut să contribui cu expertiză și să cresc profesional într-un mediu dinamic, promovând îmbunătățiri ale calității și inovație. </span>
+          </p>
         </div>
       </div>
       <div class="section" id="professionalExperienceSection">
-        <h2 id="professionalExperienceTitle">Professional experience</h2>
+        <h2 id="professionalExperienceTitle">
+          <span class="lang lang-en">Professional experience</span>
+          <span class="lang lang-ro" style="display:none;">Experiență profesională</span>
+        </h2>
         <div class="job-section-carousel" id="jobSectionCarousel">
           <div class="job-section" id="jobSection">
             <a href="#" class="job-item" id="job1Link" data-bs-toggle="modal" data-bs-target="#jobModal1" aria-label="View details for INDUSTRIAL SOFTWARE job">
               <img src="indsoft.jpg" alt="Job 1 Logo" class="job-logo" id="indsoftLogo">
               <div>
-                <h5 class="job-title" id="indsoftTitle">INDUSTRIAL SOFTWARE</h5>
-                <p class="job-position" id="indsoftPosition">Automation/Manual Quality Assurance Tester</p>
+                <h5 class="job-title" id="indsoftTitle">
+                  <span class="lang lang-en">INDUSTRIAL SOFTWARE</span>
+                  <span class="lang lang-ro" style="display:none;">SOFTWARE INDUSTRIAL</span>
+                </h5>
+                <p class="job-position" id="indsoftPosition">
+                  <span class="lang lang-en">Automation/Manual Quality Assurance Tester</span>
+                  <span class="lang lang-ro" style="display:none;">Tester Asigurarea Calității Automat/manual</span>
+                </p>
                 <p id="indsoftPeriod">May 2023 - present</p>
               </div>
             </a>
             <a href="#" class="job-item" id="job2Link" data-bs-toggle="modal" data-bs-target="#jobModal2" aria-label="View details for Bosch Global Service job">
               <img src="bosch.jpg" alt="Job 2 Logo" class="job-logo" id="boschLogo">
               <div>
-                <h5 class="job-title" id="boschTitle">Bosch Global Service</h5>
-                <p class="job-position" id="boschPosition">Manual Quality Assurance Tester</p>
+                <h5 class="job-title" id="boschTitle">
+                  <span class="lang lang-en">Bosch Global Service</span>
+                  <span class="lang lang-ro" style="display:none;">Bosch Global Service</span>
+                </h5>
+                <p class="job-position" id="boschPosition">
+                  <span class="lang lang-en">Manual Quality Assurance Tester</span>
+                  <span class="lang lang-ro" style="display:none;">Tester Asigurarea Calității Manual</span>
+                </p>
                 <p id="boschPeriod">Mar 2022 - May 2023</p>
               </div>
             </a>
             <a href="#" class="job-item" id="job3Link" data-bs-toggle="modal" data-bs-target="#jobModal3" aria-label="View details for Editura Datagroup job">
               <img src="datagroup.jpg" alt="Job 3 Logo" class="job-logo" id="datagroupLogo">
               <div>
-                <h5 class="job-title" id="datagroupTitle">Editura Datagroup</h5>
-                <p class="job-position" id="datagroupPosition">Computer Operator</p>
+                <h5 class="job-title" id="datagroupTitle">
+                  <span class="lang lang-en">Editura Datagroup</span>
+                  <span class="lang lang-ro" style="display:none;">Editura Datagroup</span>
+                </h5>
+                <p class="job-position" id="datagroupPosition">
+                  <span class="lang lang-en">Computer Operator</span>
+                  <span class="lang lang-ro" style="display:none;">Operator Calculator</span>
+                </p>
                 <p id="datagroupPeriod">May 2013 - Mar 2022</p>
               </div>
             </a>
             <a href="#" class="job-item" id="job4Link" data-bs-toggle="modal" data-bs-target="#jobModal4" aria-label="View details for RoSite job">
               <div>
-                <h5 class="job-title" id="roSiteTitle">RoSite</h5>
-                <p class="job-position" id="roSitePosition">Manual Quality Assurance Tester Web Application</p>
+                <h5 class="job-title" id="roSiteTitle">
+                  <span class="lang lang-en">RoSite</span>
+                  <span class="lang lang-ro" style="display:none;">RoSite</span>
+                </h5>
+                <p class="job-position" id="roSitePosition">
+                  <span class="lang lang-en">Manual Quality Assurance Tester Web Application</span>
+                  <span class="lang lang-ro" style="display:none;">Tester Asigurarea Calității Manual pentru Aplicații Web</span>
+                </p>
                 <p id="rositePeriod">Feb 2020 - Feb 2021</p>
               </div>
             </a>
@@ -79,10 +119,22 @@
         </div>
       </div>
       <div class="section" id="projectsSection">
-        <button class="btn" id="moreButton" data-bs-toggle="modal" data-bs-target="#projectsModal"> more... </button>
-        <h2 id="projectsTitle">Work Projects</h2>
-        <p>Below are some of the key projects I have contributed to. For a comprehensive list of all projects, please refer to the "More" section on the right.</p>
-        <p>These projects involved both manual and automated testing, using the following tools and languages:</p>
+        <button class="btn" id="moreButton" data-bs-toggle="modal" data-bs-target="#projectsModal">
+          <span class="lang lang-en">more...</span>
+          <span class="lang lang-ro" style="display:none;">mai mult...</span>
+        </button>
+        <h2 id="projectsTitle">
+          <span class="lang lang-en">Work Projects</span>
+          <span class="lang lang-ro" style="display:none;">Proiecte de muncă</span>
+        </h2>
+        <p>
+          <span class="lang lang-en"> Below are some of the key projects I have contributed to. For a comprehensive list of all projects, please refer to the "More" section on the right. </span>
+          <span class="lang lang-ro" style="display:none;"> Mai jos sunt câteva dintre proiectele importante la care am contribuit. Pentru o listă completă a tuturor proiectelor, vă rog să consultați secțiunea „Mai mult” din dreapta. </span>
+        </p>
+        <p>
+          <span class="lang lang-en"> These projects involved both manual and automated testing, using the following tools and languages: </span>
+          <span class="lang lang-ro" style="display:none;"> Aceste proiecte au implicat testare manuală și automată, folosind următoarele instrumente și limbaje: </span>
+        </p>
         <ul>
           <li>Eclipse</li>
           <li>Jira</li>
@@ -96,7 +148,10 @@
           <li>GitLab</li>
           <li>Jenkins</li>
         </ul>
-        <p>Languages:</p>
+        <p>
+          <span class="lang lang-en">Languages:</span>
+          <span class="lang lang-ro" style="display:none;">Limbaje:</span>
+        </p>
         <ul>
           <li>Java</li>
           <li>Selenium</li>
@@ -105,98 +160,195 @@
         <div class="projects-container" id="projectsContainer">
           <div class="project-item" id="project1">
             <div>
-              <h5 class="project-title" id="project1Title">Municipiul Alba</h5>
+              <h5 class="project-title" id="project1Title">
+                <span class="lang lang-en">Municipiul Alba</span>
+                <span class="lang lang-ro" style="display:none;">Municipiul Alba</span>
+              </h5>
             </div>
             <img src="projects/alba logo.jpg" alt="Project 1 Image" class="project-image" id="project1Image">
           </div>
           <div class="project-item" id="project2">
             <div>
-              <h5 class="project-title" id="project2Title">Primăria Abrud</h5>
+              <h5 class="project-title" id="project2Title">
+                <span class="lang lang-en">Primăria Abrud</span>
+                <span class="lang lang-ro" style="display:none;">Primăria Abrud</span>
+              </h5>
             </div>
             <img src="projects/abrud logo.jpg" alt="Project 2 Image" class="project-image" id="project2Image">
           </div>
           <div class="project-item" id="project3">
             <div>
-              <h5 class="project-title" id="project3Title">Municipiul Sector I București</h5>
+              <h5 class="project-title" id="project3Title">
+                <span class="lang lang-en">Municipiul Sector I București</span>
+                <span class="lang lang-ro" style="display:none;">Municipiul Sector 1 București</span>
+              </h5>
             </div>
             <img src="projects/adps1 logo.jpg" alt="Project 3 Image" class="project-image" id="project3Image">
           </div>
           <div class="project-item" id="project4">
             <div>
-              <h5 class="project-title" id="project4Title">Municipiul Aiud</h5>
+              <h5 class="project-title" id="project4Title">
+                <span class="lang lang-en">Municipiul Aiud</span>
+                <span class="lang lang-ro" style="display:none;">Municipiul Aiud</span>
+              </h5>
             </div>
             <img src="projects/aiud logo.jpg" alt="Project 4 Image" class="project-image" id="project4Image">
           </div>
           <div class="project-item" id="project5">
             <div>
-              <h5 class="project-title" id="project5Title">Primăria Florești</h5>
+              <h5 class="project-title" id="project5Title">
+                <span class="lang lang-en">Primăria Florești</span>
+                <span class="lang lang-ro" style="display:none;">Primăria Florești</span>
+              </h5>
             </div>
             <img src="projects/floresti logo.jpg" alt="Project 5 Image" class="project-image" id="project5Image">
           </div>
         </div>
       </div>
       <div class="section" id="personalProjectsSection">
-        <h2 id="personalProjectsTitle">Personal Projects</h2>
-        <p>These projects were developed using WordPress. I managed the full backend setup, including installing and configuring essential plugins for SEO optimization, security enhancements, and Google advertising integration. I utilized popular template builders such as Elementor and WoodMart to create responsive and visually appealing layouts. For these projects, I performed multiple manual and automated tests to ensure functionality, performance, and reliability.</p>
+        <h2 id="personalProjectsTitle">
+          <span class="lang lang-en">Personal Projects</span>
+          <span class="lang lang-ro" style="display:none;">Proiecte personale</span>
+        </h2>
+        <p>
+          <span class="lang lang-en"> These projects were developed using WordPress. I managed the full backend setup, including installing and configuring essential plugins for SEO optimization, security enhancements, and Google advertising integration. I utilized popular template builders such as Elementor and WoodMart to create responsive and visually appealing layouts. For these projects, I performed multiple manual and automated tests to ensure functionality, performance, and reliability. </span>
+          <span class="lang lang-ro" style="display:none;"> Aceste proiecte au fost dezvoltate folosind WordPress. Am gestionat configurarea completă a backend-ului, inclusiv instalarea și configurarea plugin-urilor esențiale pentru optimizarea SEO, îmbunătățirea securității și integrarea publicității Google. Am utilizat constructori populari de teme precum Elementor și WoodMart pentru a crea layout-uri responsive și atractive vizual. Pentru aceste proiecte, am efectuat teste manuale și automate multiple pentru a asigura funcționalitatea, performanța și fiabilitatea. </span>
+        </p>
         <ul>
-          <li>Customizing themes and templates to fit project requirements</li>
-          <li>Implementing performance optimization techniques to improve loading speed</li>
-          <li>Setting up analytics tools like Google Analytics for tracking and insights</li>
-          <li>Managing website backups and updates for ongoing maintenance</li>
-          <li>Ensuring cross-browser and mobile compatibility</li>
-          <li>Troubleshooting and resolving plugin conflicts and errors</li>
-          <li>Basic PHP or CSS tweaks to customize themes/plugins</li>
-          <li>Working knowledge of website security best practices (firewalls, SSL, user roles)</li>
-          <li>Use of SEO tools such as Yoast SEO</li>
-          <li>Testing website usability and accessibility</li>
+          <li>
+            <span class="lang lang-en">Customizing themes and templates to fit project requirements</span>
+            <span class="lang lang-ro" style="display:none;">Personalizarea temelor și șabloanelor pentru a se potrivi cerințelor proiectului</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Implementing performance optimization techniques to improve loading speed</span>
+            <span class="lang lang-ro" style="display:none;">Implementarea tehnicilor de optimizare a performanței pentru a îmbunătăți viteza de încărcare</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Setting up analytics tools like Google Analytics for tracking and insights</span>
+            <span class="lang lang-ro" style="display:none;">Configurarea instrumentelor de analiză precum Google Analytics pentru monitorizare și informații</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Managing website backups and updates for ongoing maintenance</span>
+            <span class="lang lang-ro" style="display:none;">Gestionarea backup-urilor și actualizărilor site-ului pentru întreținere continuă</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Ensuring cross-browser and mobile compatibility</span>
+            <span class="lang lang-ro" style="display:none;">Asigurarea compatibilității între browsere și dispozitive mobile</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Troubleshooting and resolving plugin conflicts and errors</span>
+            <span class="lang lang-ro" style="display:none;">Depanarea și rezolvarea conflictelor și erorilor de plugin-uri</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Basic PHP or CSS tweaks to customize themes/plugins</span>
+            <span class="lang lang-ro" style="display:none;">Ajustări de bază în PHP sau CSS pentru personalizarea temelor/plugin-urilor</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Working knowledge of website security best practices (firewalls, SSL, user roles)</span>
+            <span class="lang lang-ro" style="display:none;">Cunoștințe de bază despre cele mai bune practici în securitatea site-urilor (firewall-uri, SSL, roluri utilizatori)</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Use of SEO tools such as Yoast SEO</span>
+            <span class="lang lang-ro" style="display:none;">Utilizarea unor instrumente SEO precum Yoast SEO</span>
+          </li>
+          <li>
+            <span class="lang lang-en">Testing website usability and accessibility</span>
+            <span class="lang lang-ro" style="display:none;">Testarea utilizabilității și accesibilității site-ului</span>
+          </li>
         </ul>
-        <p>For the <strong>Ubex AI Project</strong>, I am responsible for performing manual tests and implementing automation tests using Java with Selenium and TestNG. Additionally, I installed and configured <strong>Jenkins</strong> to automate build and test pipelines, enabling efficient continuous integration and delivery.</p>
+        <p>
+          <span class="lang lang-en"> For the <strong>Ubex AI Project</strong>, I am responsible for performing manual tests and implementing automation tests using Java with Selenium and TestNG. Additionally, I installed and configured <strong>Jenkins</strong> to automate build and test pipelines, enabling efficient continuous integration and delivery. </span>
+          <span class="lang lang-ro" style="display:none;"> Pentru <strong>Proiectul Ubex AI</strong>, sunt responsabil pentru efectuarea testelor manuale și implementarea testelor automate folosind Java cu Selenium și TestNG. De asemenea, am instalat și configurat <strong>Jenkins</strong> pentru automatizarea proceselor de build și test, facilitând integrarea și livrarea continuă eficiente. </span>
+        </p>
+        <p>
+          <span class="lang lang-en"> The <strong>Learn Java</strong> project is a personal teaching initiative where I aim to create a structured learning resource for Java enthusiasts. I use tools such as IntelliJ IDEA for development, GitHub for version control and collaboration, and educational platforms for course content delivery. To enhance the project, I also utilize JUnit for testing, Maven for project management, and Visual Studio Code as an additional lightweight editor. </span>
+          <span class="lang lang-ro" style="display:none;"> Proiectul <strong>Learn Java</strong> este o inițiativă personală de predare în care îmi propun să creez o resursă de învățare structurată pentru pasionații de Java. Folosesc instrumente precum IntelliJ IDEA pentru dezvoltare, GitHub pentru controlul versiunilor și colaborare, și platforme educaționale pentru livrarea conținutului cursurilor. Pentru a îmbunătăți proiectul, utilizez și JUnit pentru testare, Maven pentru managementul proiectului și Visual Studio Code ca editor suplimentar, ușor. </span>
+        </p>
         <!-- Single container for projects -->
         <div class="personal-projects-container" id="personalProjectsContainer">
           <!-- First project -->
           <a href="https://redglassauto.ro/" target="_blank" class="project-item" id="project6">
             <div>
-              <h5 class="project-title" id="project6Title">Redglassauto</h5>
+              <h5 class="project-title" id="project6Title">
+                <span class="lang lang-en">Redglassauto</span>
+                <span class="lang lang-ro" style="display:none;">Redglassauto</span>
+              </h5>
             </div>
             <img src="projects/redglassauto.png" alt="Project 6 Image" class="project-image" id="project6Image">
           </a>
           <!-- Second project -->
           <a href="https://frontkare-detectiv.ro/" target="_blank" class="project-item" id="project7">
             <div>
-              <h5 class="project-title" id="project7Title">Frontkare-Detectiv</h5>
+              <h5 class="project-title" id="project7Title">
+                <span class="lang lang-en">Frontkare-Detectiv</span>
+                <span class="lang lang-ro" style="display:none;">Frontkare-Detectiv</span>
+              </h5>
             </div>
             <img src="projects/frontkare.png" alt="Project 7 Image" class="project-image" id="project7Image">
           </a>
           <a href="https://chat.ubex.ai/auth/login" target="_blank" class="project-item" id="project8">
             <div>
-              <h5 class="project-title" id="project8Title">UBEX AI</h5>
+              <h5 class="project-title" id="project8Title">
+                <span class="lang lang-en">UBEX AI</span>
+                <span class="lang lang-ro" style="display:none;">UBEX AI</span>
+              </h5>
             </div>
             <img src="projects/ubex.png" alt="Project 8 Image" class="project-image" id="project8Image">
+          </a>
+          <a href="#" target="_blank" class="project-item" id="project9">
+            <div>
+              <h5 class="project-title" id="project9Title">
+                <span class="lang lang-en">Learn Java</span>
+                <span class="lang lang-ro" style="display:none;">Learn Java</span>
+              </h5>
+            </div>
+            <img src="projects/java.png" alt="Project 9 Image" class="project-image" id="project9Image">
           </a>
         </div>
       </div>
       <div class="section" id="educationSection">
-        <h2 id="educationTitle">Education</h2>
+        <h2 id="educationTitle">
+          <span class="lang lang-en">Education</span>
+          <span class="lang lang-ro" style="display:none;">Educație</span>
+        </h2>
         <div class="content" id="educationContent">
           <img src="feaa.jpg" alt="FEAA Picture" id="feaaPicture">
           <div>
-            <h5 id="professionalExperienceTitle">Bachelor's degree - Faculty of Economics and Business Administration</h5>
-            <p class="education" id="educationLocation">Economic and Informatics | Timișoara</p>
+            <h5 id="professionalExperienceTitle">
+              <span class="lang lang-en">Bachelor's degree - Faculty of Economics and Business Administration</span>
+              <span class="lang lang-ro" style="display:none;">Licență - Facultatea de Economie și Administrarea Afacerilor</span>
+            </h5>
+            <p class="education" id="educationLocation">
+              <span class="lang lang-en">Economic and Informatics | Timișoara</span>
+              <span class="lang lang-ro" style="display:none;">Economie și Informatică | Timișoara</span>
+            </p>
             <p>2020 - 2023</p>
           </div>
         </div>
       </div>
       <div class="section" id="certificationsSection">
-        <h2 id="certificationsTitle">Courses & Certifications</h2>
+        <h2 id="certificationsTitle">
+          <span class="lang lang-en">Courses & Certifications</span>
+          <span class="lang lang-ro" style="display:none;">Cursuri și Certificări</span>
+        </h2>
         <table id="certificationsTable">
           <tr>
             <td>
               <img src="transilvania.png" alt="Transilvania Picture" id="transilvaniaPicture">
             </td>
             <td>
-              <h5 id="certificationTitle">Software Tester Transilvania Digital Innovation 4.0</h5>
-              <p class="certification" id="certificationAquiredDate">Date acquired: Aug 2023</p>
-              <p>Certification in Software Testing from Transilvania Digital Innovation 4.0, focusing on advanced manual and automated testing techniques using Java and Selenium WebDriver.</p>
+              <h5 id="certificationTitle">
+                <span class="lang lang-en">Software Tester Transilvania Digital Innovation 4.0</span>
+                <span class="lang lang-ro" style="display:none;">Tester Software Transilvania Digital Innovation 4.0</span>
+              </h5>
+              <p class="certification" id="certificationAquiredDate">
+                <span class="lang lang-en">Date acquired: Aug 2023</span>
+                <span class="lang lang-ro" style="display:none;">Data obținerii: Aug 2023</span>
+              </p>
+              <p>
+                <span class="lang lang-en"> Certification in Software Testing from Transilvania Digital Innovation 4.0, focusing on advanced manual and automated testing techniques using Java and Selenium WebDriver. </span>
+                <span class="lang lang-ro" style="display:none;"> Certificare în testarea software din cadrul Transilvania Digital Innovation 4.0, axată pe tehnici avansate de testare manuală și automată folosind Java și Selenium WebDriver. </span>
+              </p>
             </td>
           </tr>
           <tr>
@@ -204,7 +356,10 @@
               <img src="udemy.png" alt="Udemy Picture" class="udemyImage">
             </td>
             <td>
-              <h5 id="certificationTitle">Java Masterclass 2025: 130+ Hours of Expert Lessons</h5>
+              <h5 id="certificationTitle">
+                <span class="lang lang-en">Java Masterclass 2025: 130+ Hours of Expert Lessons</span>
+                <span class="lang lang-ro" style="display:none;">Java Masterclass 2025: Peste 130 de ore de lecții de expert</span>
+              </h5>
             </td>
           </tr>
           <tr>
@@ -212,7 +367,10 @@
               <img src="udemy.png" alt="Udemy Picture" class="udemyImage">
             </td>
             <td>
-              <h5 id="certificationTitle">The Complete Python Bootcamp From Zero to Hero in Python</h5>
+              <h5 id="certificationTitle">
+                <span class="lang lang-en">The Complete Python Bootcamp From Zero to Hero in Python</span>
+                <span class="lang lang-ro" style="display:none;">The Complete Python Bootcamp De la Zero la Erou în Python</span>
+              </h5>
             </td>
           </tr>
           <tr>
@@ -220,185 +378,319 @@
               <img src="udemy.png" alt="Udemy Picture" class="udemyImage">
             </td>
             <td>
-              <h5 id="certificationTitle">Go - The Complete Guide</h5>
+              <h5 id="certificationTitle">
+                <span class="lang lang-en">Go - The Complete Guide</span>
+                <span class="lang lang-ro" style="display:none;">Go - Ghidul complet</span>
+              </h5>
             </td>
           </tr>
         </table>
       </div>
       <div id="recommendationsSection">
-        <h2 id="recommendationsTitle">Recommendations</h2>
+        <h2 id="recommendationsTitle">
+          <span class="lang lang-en">Recommendations</span>
+          <span class="lang lang-ro" style="display:none;">Recomandări</span>
+        </h2>
         <div id="recommendationsContainer">
           <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-Bosch-Service-Solutions.pdf')">
-            <h3 class="recommendation-title">Bosch Service Solutions</h3>
+            <h3 class="recommendation-title">
+              <span class="lang lang-en">Bosch Service Solutions</span>
+              <span class="lang lang-ro" style="display:none;">Bosch Service Solutions</span>
+            </h3>
           </div>
           <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-Datagroup.pdf')">
-            <h3 class="recommendation-title">Editura Datagroup</h3>
+            <h3 class="recommendation-title">
+              <span class="lang lang-en">Editura Datagroup</span>
+              <span class="lang lang-ro" style="display:none;">Editura Datagroup</span>
+            </h3>
           </div>
           <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-Raul-Tat-PM-Datagroup.pdf')">
-            <h3 class="recommendation-title">Raul Tat Project Manager Datagroup</h3>
+            <h3 class="recommendation-title">
+              <span class="lang lang-en">Raul Tat Project Manager Datagroup</span>
+              <span class="lang lang-ro" style="display:none;">Raul Tat Manager de Proiect Datagroup</span>
+            </h3>
           </div>
           <div class="recommendation-item" onclick="openPDF('recommendation/Recomandare-RoSite.pdf')">
-            <h3 class="recommendation-title"> RoSite</h3>
+            <h3 class="recommendation-title">
+              <span class="lang lang-en">RoSite</span>
+              <span class="lang lang-ro" style="display:none;">RoSite</span>
+            </h3>
           </div>
         </div>
       </div>
-      <button id="downloadBtn">Download CV as PDF</button>
-    </div>
-    <div class="modal fade" id="projectsModal" tabindex="-1" aria-labelledby="projectsModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <button id="downloadBtn">
+        <span class="lang lang-en">Download CV as PDF</span>
+        <span class="lang lang-ro" style="display:none;">Descarcă CV-ul ca PDF</span>
+      </button>
+      <div class="modal fade" id="projectsModal" tabindex="-1" aria-labelledby="projectsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="projectsModalLabel">
+                <span class="lang lang-en">All Projects</span>
+                <span class="lang lang-ro" style="display:none;">Toate Proiectele</span>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Deva SE</li>
+                <li>Apahida SE</li>
+                <li>Bacau SE</li>
+                <li>Blaj SE</li>
+                <li>Brad SE</li>
+                <li>Brasov SE</li>
+                <li>Buzau SE</li>
+                <li>Campia Turzii SE</li>
+                <li>Campulung Moldovenesc SE</li>
+                <li>Carei SE</li>
+                <li>Dej SE</li>
+                <li>Deva2 DAS SE</li>
+                <li>Falticeni SE</li>
+                <li>Floresti SE</li>
+                <li>Gherla SE</li>
+                <li>Giurgiu SE</li>
+                <li>Hunedoara SE</li>
+                <li>Ilfov SE</li>
+                <li>Motru SE</li>
+                <li>Onesti SE</li>
+                <li>Resita SE</li>
+                <li>Sibiu SE</li>
+                <li>Tecuci SE</li>
+                <li>Turda SE</li>
+                <li>Urziceni SE</li>
+                <li>Valcea SE</li>
+                <li>Vaslui SE</li>
+                <li>Vatra Dornei SE</li>
+                <li>Fagaras SE</li>
+                <li>Ostrov SE</li>
+                <li>Maramures</li>
+                <li>Ludus</li>
+                <li>PS2 Politia Locala</li>
+                <li>Demo Mat</li>
+                <li>Dorohoi SE (Public Login)</li>
+                <li>Cugir</li>
+                <li>Afi SE</li>
+                <li>PS2</li>
+                <li>Teleorman</li>
+                <li>Moreni</li>
+                <li>Scobinti</li>
+                <li>Moldovita</li>
+                <li>Telicu Inferior</li>
+                <li>Avram Iancu</li>
+                <li>Garda de Sus</li>
+                <li>Teliucu Beta</li>
+                <li>Abrud</li>
+                <li>Slobozia</li>
+                <li>Arieseni</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="jobModal1" tabindex="-1" aria-labelledby="jobModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <img src="indsoft.jpg" alt="Job 1 Logo" class="img-fluid mb-3" style="width: 100px; height: 70px; margin-right: 10px;">
+              <h5 class="modal-title" id="jobModalLabel1" style="font-weight: bold; margin: 0 auto;">
+                <span class="lang lang-en">Quality Assurance Tester - INDUSTRIAL SOFTWARE</span>
+                <span class="lang lang-ro" style="display:none;">Tester Asigurare Calitate - INDUSTRIAL SOFTWARE</span>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>
+                  <span class="lang lang-en">Analyze and create manual test scenarios for 56 projects, documenting them in Jira and reporting bugs as necessary.</span>
+                  <span class="lang lang-ro" style="display:none;">Analizez și creez scenarii de testare manuală pentru 56 de proiecte, documentându-le în Jira și raportând bug-uri după caz.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Automate 20% of these projects within a year, using Java and Selenium, with Maven and TestNG for execution, and Jenkins for continuous integration (CI).</span>
+                  <span class="lang lang-ro" style="display:none;">Automatizez 20% din aceste proiecte în decurs de un an, folosind Java și Selenium, cu Maven și TestNG pentru execuție și Jenkins pentru integrare continuă (CI).</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Monitor and maintain over 120 hours of automated test execution, ensuring smooth and consistent operation.</span>
+                  <span class="lang lang-ro" style="display:none;">Monitorizez și mențin peste 120 de ore de execuție a testelor automate, asigurând o funcționare fluentă și constantă.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Continue automating ongoing projects to improve efficiency and test coverage.</span>
+                  <span class="lang lang-ro" style="display:none;">Continuu automatizarea proiectelor în desfășurare pentru a îmbunătăți eficiența și acoperirea testelor.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Implement and manage continuous integration and continuous delivery (CI/CD) pipelines using Jenkins, ensuring automated tests are integrated into the build and delivery process.</span>
+                  <span class="lang lang-ro" style="display:none;">Implementarea și gestionarea pipeline-urilor de integrare și livrare continuă (CI/CD) folosind Jenkins, asigurând integrarea testelor automate în procesul de construire și livrare.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Use GitLab and Git Extension to monitor new changes, manage commit history, and collaborate effectively with development teams.</span>
+                  <span class="lang lang-ro" style="display:none;">Utilizez GitLab și Git Extension pentru a monitoriza modificările noi, a gestiona istoricul commit-urilor și a colabora eficient cu echipele de dezvoltare.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Collaborate with 3 different development teams, consisting of a total of 16 developers, to ensure seamless project execution.</span>
+                  <span class="lang lang-ro" style="display:none;">Colaborez cu 3 echipe diferite de dezvoltare, formate dintr-un total de 16 dezvoltatori, pentru a asigura execuția fără probleme a proiectelor.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Troubleshoot and fix bugs in developed applications to maintain functionality and quality.</span>
+                  <span class="lang lang-ro" style="display:none;">Depanez și remediez bug-uri în aplicațiile dezvoltate pentru a menține funcționalitatea și calitatea.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Analyze and propose enhancements to applications, focusing on improving user-friendliness and overall experience.</span>
+                  <span class="lang lang-ro" style="display:none;">Analizez și propun îmbunătățiri aplicațiilor, concentrându-mă pe sporirea ușurinței de utilizare și a experienței generale.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="jobModal2" tabindex="-1" aria-labelledby="jobModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <img src="bosch.jpg" alt="Job 2 Logo" class="img-fluid mb-3" style="width: 100px; height: 70px; margin-right: 10px;">
+              <h5 class="modal-title" id="jobModalLabel2" style="font-weight: bold; margin: 0 auto;">
+                <span class="lang lang-en">Manual Quality Assurance Tester - Bosch Global Service</span>
+                <span class="lang lang-ro" style="display:none;">Tester Manual Asigurare Calitate - Bosch Global Service</span>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>
+                  <span class="lang lang-en">Manual testing on the databases of 4 applications using MySQL, PowerBI, SAP, and an internal Bosch application.</span>
+                  <span class="lang lang-ro" style="display:none;">Testare manuală pe bazele de date a 4 aplicații folosind MySQL, PowerBI, SAP și o aplicație internă Bosch.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Performing User Acceptance Testing (UAT) and Functional Testing (FT).</span>
+                  <span class="lang lang-ro" style="display:none;">Executarea testării de acceptare a utilizatorului (UAT) și testării funcționale (FT).</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Writing test scenarios and documenting results in Jira.</span>
+                  <span class="lang lang-ro" style="display:none;">Scrierea scenariilor de test și documentarea rezultatelor în Jira.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Conducting regression testing after database updates performed by the development team.</span>
+                  <span class="lang lang-ro" style="display:none;">Executarea testării de regresie după actualizările bazei de date efectuate de echipa de dezvoltare.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Updating application logs and making them available to customers.</span>
+                  <span class="lang lang-ro" style="display:none;">Actualizarea jurnalelor aplicației și punerea acestora la dispoziția clienților.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Manual testing of Bosch's internal web application and performing front-end corrections, such as link replacements, text corrections, and design adjustments.</span>
+                  <span class="lang lang-ro" style="display:none;">Testare manuală a aplicației web interne Bosch și efectuarea corecțiilor front-end, cum ar fi înlocuirea link-urilor, corectarea textelor și ajustări de design.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Implementing Agile testing methodologies.</span>
+                  <span class="lang lang-ro" style="display:none;">Implementarea metodologiilor Agile de testare.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Conducting daily system error checks in SAP, resolving issues, and updating documentation based on new releases developed.</span>
+                  <span class="lang lang-ro" style="display:none;">Efectuarea zilnică a verificărilor erorilor de sistem în SAP, rezolvarea problemelor și actualizarea documentației bazate pe noile versiuni dezvoltate.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Using Jira and Microsoft Excel for functional testing, bug reporting, and Agile testing.</span>
+                  <span class="lang lang-ro" style="display:none;">Utilizarea Jira și Microsoft Excel pentru testare funcțională, raportare bug-uri și testare Agile.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="jobModal3" tabindex="-1" aria-labelledby="jobModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <img src="datagroup.jpg" alt="Job 3 Logo" class="img-fluid mb-3" style="width: 100px; height: 60px; margin-right: 10px;">
+              <h5 class="modal-title" id="jobModalLabel3" style="font-weight: bold; margin: 0 auto;">
+                <span class="lang lang-en">Computer Operator - Editura Datagroup</span>
+                <span class="lang lang-ro" style="display:none;">Operator Calculator - Editura Datagroup</span>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>
+                  <span class="lang lang-en">Executing OCR (Optical Character Recognition) processes to extract and convert text from scanned documents or images into editable format.</span>
+                  <span class="lang lang-ro" style="display:none;">Executarea proceselor OCR (Recunoaștere Optică a Caracterelor) pentru extragerea și conversia textului din documente scanate sau imagini în format editabil.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Editing and formatting LexisNexis Austria magazines, ensuring that the documents meet quality standards and comply with editorial requirements.</span>
+                  <span class="lang lang-ro" style="display:none;">Editarea și formatarea revistelor LexisNexis Austria, asigurându-mă că documentele respectă standardele de calitate și cerințele editoriale.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Generating XML files to organize and structure information in a manageable and processable format.</span>
+                  <span class="lang lang-ro" style="display:none;">Generarea fișierelor XML pentru a organiza și structura informațiile într-un format ușor de gestionat și procesat.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Marking Word documents for HTML code generation, necessary for the online publication of materials.</span>
+                  <span class="lang lang-ro" style="display:none;">Marcarea documentelor Word pentru generarea codului HTML, necesar pentru publicarea online a materialelor.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Creating internal tools to improve processes and marking efficiency using VBA, aimed at automating and optimizing the workflow. With these tools, I managed to reduce document marking and formatting execution time by 75%, significantly improving the process efficiency.</span>
+                  <span class="lang lang-ro" style="display:none;">Crearea unor instrumente interne pentru îmbunătățirea proceselor și eficienței marcării folosind VBA, cu scopul de a automatiza și optimiza fluxul de lucru. Cu aceste instrumente, am reușit să reduc timpul de marcare și formatare a documentelor cu 75%, îmbunătățind semnificativ eficiența procesului.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="jobModal4" tabindex="-1" aria-labelledby="jobModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <h5 class="modal-title" id="jobModalLabel4" style="font-weight: bold; margin: 0 auto;">
+                <span class="lang lang-en">Manual Quality Assurance Tester Web Application - RoSite</span>
+                <span class="lang lang-ro" style="display:none;">Tester Manual Asigurare Calitate Aplicație Web - RoSite</span>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>
+                  <span class="lang lang-en">I performed manual testing on a web application, closely collaborating with a team of 2 developers to validate new implementations and functionalities.</span>
+                  <span class="lang lang-ro" style="display:none;">Am efectuat testare manuală pe o aplicație web, colaborând strâns cu o echipă de 2 dezvoltatori pentru validarea noilor implementări și funcționalități.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">I created and managed test scenarios in Trello, documenting all test cases and ensuring they were clear and easy to follow for subsequent regression testing.</span>
+                  <span class="lang lang-ro" style="display:none;">Am creat și gestionat scenarii de testare în Trello, documentând toate cazurile de test și asigurându-mă că erau clare și ușor de urmărit pentru testarea de regresie ulterioară.</span>
+                </li>
+                <li>
+                  <span class="lang lang-en">Additionally, I actively contributed to the improvement of the application by proposing solutions and optimizations, with the goal of enhancing performance and user experience.</span>
+                  <span class="lang lang-ro" style="display:none;">De asemenea, am contribuit activ la îmbunătățirea aplicației, propunând soluții și optimizări, cu scopul de a crește performanța și experiența utilizatorului.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="pdfModal" class="modal">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="projectsModalLabel">All Projects</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              <li>Deva SE</li>
-              <li>Apahida SE</li>
-              <li>Bacau SE</li>
-              <li>Blaj SE</li>
-              <li>Brad SE</li>
-              <li>Brasov SE</li>
-              <li>Buzau SE</li>
-              <li>Campia Turzii SE</li>
-              <li>Campulung Moldovenesc SE</li>
-              <li>Carei SE</li>
-              <li>Dej SE</li>
-              <li>Deva2 DAS SE</li>
-              <li>Falticeni SE</li>
-              <li>Floresti SE</li>
-              <li>Gherla SE</li>
-              <li>Giurgiu SE</li>
-              <li>Hunedoara SE</li>
-              <li>Ilfov SE</li>
-              <li>Motru SE</li>
-              <li>Onesti SE</li>
-              <li>Resita SE</li>
-              <li>Sibiu SE</li>
-              <li>Tecuci SE</li>
-              <li>Turda SE</li>
-              <li>Urziceni SE</li>
-              <li>Valcea SE</li>
-              <li>Vaslui SE</li>
-              <li>Vatra Dornei SE</li>
-              <li>Fagaras SE</li>
-              <li>Ostrov SE</li>
-              <li>Maramures</li>
-              <li>Ludus</li>
-              <li>PS2 Politia Locala</li>
-              <li>Demo Mat</li>
-              <li>Dorohoi SE (Public Login)</li>
-              <li>Cugir</li>
-              <li>Afi SE</li>
-              <li>PS2</li>
-              <li>Teleorman</li>
-              <li>Moreni</li>
-              <li>Scobinti</li>
-              <li>Moldovita</li>
-              <li>Telicu Inferior</li>
-              <li>Avram Iancu</li>
-              <li>Garda de Sus</li>
-              <li>Teliucu Beta</li>
-              <li>Abrud</li>
-              <li>Slobozia</li>
-              <li>Arieseni</li>
-            </ul>
-          </div>
+          <span class="close" onclick="closePDF()">&times;</span>
+          <iframe id="pdfViewer" src="" width="100%" height="500px"></iframe>
         </div>
       </div>
-    </div>
-    <div class="modal fade" id="jobModal1" tabindex="-1" aria-labelledby="jobModalLabel1" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
-            <img src="indsoft.jpg" alt="Job 1 Logo" class="img-fluid mb-3" style="width: 100px; height: 70px; margin-right: 10px;">
-            <h5 class="modal-title" id="jobModalLabel1" style="font-weight: bold; margin: 0 auto;">Quality Assurance Tester - INDUSTRIAL SOFTWARE</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              <li>Analyze and create manual test scenarios for 56 projects, documenting them in Jira and reporting bugs as necessary.</li>
-              <li>Automate 20% of these projects within a year, using Java and Selenium, with Maven and TestNG for execution, and Jenkins for continuous integration (CI).</li>
-              <li>Monitor and maintain over 120 hours of automated test execution, ensuring smooth and consistent operation.</li>
-              <li>Continue automating ongoing projects to improve efficiency and test coverage.</li>
-              <li>Implement and manage continuous integration and continuous delivery (CI/CD) pipelines using Jenkins, ensuring automated tests are integrated into the build and delivery process.</li>
-              <li>Use GitLab and Git Extension to monitor new changes, manage commit history, and collaborate effectively with development teams.</li>
-              <li>Collaborate with 3 different development teams, consisting of a total of 16 developers, to ensure seamless project execution.</li>
-              <li>Troubleshoot and fix bugs in developed applications to maintain functionality and quality.</li>
-              <li>Analyze and propose enhancements to applications, focusing on improving user-friendliness and overall experience.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="jobModal2" tabindex="-1" aria-labelledby="jobModalLabel2" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
-            <img src="bosch.jpg" alt="Job 2 Logo" class="img-fluid mb-3" style="width: 100px; height: 70px; margin-right: 10px;">
-            <h5 class="modal-title" id="jobModalLabel2" style="font-weight: bold; margin: 0 auto;">Manual Quality Assurance Tester - Bosch Global Service</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              <li>Manual testing on the databases of 4 applications using MySQL, PowerBI, SAP, and an internal Bosch application.</li>
-              <li>Performing User Acceptance Testing (UAT) and Functional Testing (FT).</li>
-              <li>Writing test scenarios and documenting results in Jira.</li>
-              <li>Conducting regression testing after database updates performed by the development team.</li>
-              <li>Updating application logs and making them available to customers.</li>
-              <li>Manual testing of Bosch's internal web application and performing front-end corrections, such as link replacements, text corrections, and design adjustments.</li>
-              <li>Implementing Agile testing methodologies.</li>
-              <li>Conducting daily system error checks in SAP, resolving issues, and updating documentation based on new releases developed.</li>
-              <li>Using Jira and Microsoft Excel for functional testing, bug reporting, and Agile testing.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="jobModal3" tabindex="-1" aria-labelledby="jobModalLabel3" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
-            <img src="datagroup.jpg" alt="Job 3 Logo" class="img-fluid mb-3" style="width: 100px; height: 60px; margin-right: 10px;">
-            <h5 class="modal-title" id="jobModalLabel3" style="font-weight: bold; margin: 0 auto;">Computer Operator - Editura Datagroup</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              <li>Executing OCR (Optical Character Recognition) processes to extract and convert text from scanned documents or images into editable format.</li>
-              <li>Editing and formatting LexisNexis Austria magazines, ensuring that the documents meet quality standards and comply with editorial requirements.</li>
-              <li>Generating XML files to organize and structure information in a manageable and processable format.</li>
-              <li>Marking Word documents for HTML code generation, necessary for the online publication of materials.</li>
-              <li>Creating internal tools to improve processes and marking efficiency using VBA, aimed at automating and optimizing the workflow. With these tools, I managed to reduce document marking and formatting execution time by 75%, significantly improving the process efficiency.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="jobModal4" tabindex="-1" aria-labelledby="jobModalLabel4" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
-            <h5 class="modal-title" id="jobModalLabel4" style="font-weight: bold; margin: 0 auto;">Manual Quality Assurance Tester Web Application - RoSite</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              <li>I performed manual testing on a web application, closely collaborating with a team of 2 developers to validate new implementations and functionalities.</li>
-              <li>I created and managed test scenarios in Trello, documenting all test cases and ensuring they were clear and easy to follow for subsequent regression testing.</li>
-              <li>Additionally, I actively contributed to the improvement of the application by proposing solutions and optimizations, with the goal of enhancing performance and user experience.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="pdfModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closePDF()">&times;</span>
-        <iframe id="pdfViewer" src="" width="100%" height="500px"></iframe>
-      </div>
-    </div>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        document.getElementById('btn-en').addEventListener('click', () => {
+          toggleLanguage('en');
+        });
+        document.getElementById('btn-ro').addEventListener('click', () => {
+          toggleLanguage('ro');
+        });
+
+        function toggleLanguage(lang) {
+          const langs = document.querySelectorAll('.lang');
+          langs.forEach(el => {
+            if (el.classList.contains(`lang-${lang}`)) {
+              el.style.display = 'block';
+            } else {
+              el.style.display = 'none';
+            }
+          });
+        }
+        // Optional: set default language on page load
+        toggleLanguage('en');
+      </script>
   </body>
 </html>

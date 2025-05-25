@@ -3,6 +3,10 @@ body {
   background-color: #f8f9fa;
 }
 
+#languageSelector {
+  margin: 10px;
+}
+
 .header {
   background-color: #343a40;
   color: white;
@@ -581,4 +585,29 @@ a {
 .project-item {
   /* Optional: Adjust any other styles you want to apply specifically to the project-item */
   color: inherit; /* Ensures the text color is inherited from the surrounding context */
+}
+
+#language-switcher {
+  position: sticky;
+  top: 0;
+  
+  background: #343a40;      /* optional, to avoid content showing through */
+  z-index: 1000;          /* make sure it stays above other content */
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;      /* optional, add some padding */
+}
+
+#language-switcher img {
+  width: 24px;  /* very small width */
+  height: auto; /* keep aspect ratio */
+  cursor: pointer;
+  border-radius: 3px; /* subtle rounding */
+  transition: transform 0.2s ease;
+}
+
+#language-switcher img:hover {
+  transform: scale(1.2); /* slight zoom on hover */
 }
