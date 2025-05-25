@@ -439,6 +439,13 @@ body {
   }
 }
 
+#personalProjectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 #moreButton {
   position: absolute;
   top: 5px;
